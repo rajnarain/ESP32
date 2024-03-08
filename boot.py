@@ -5,6 +5,7 @@ except:
 
 from machine import Pin
 import network
+import dht
 
 import esp
 esp.osdebug(None)
@@ -27,3 +28,4 @@ print('Connection successful')
 print(station.ifconfig())
 
 led = Pin(2, Pin.OUT)
+sensor = dht.DHT22(Pin(14))
